@@ -1,10 +1,13 @@
 class PostsController < ApplicationController
+  def index
+     users = User.includes(:posts).all
+     render json: users, each_serializer: PostsSerializer, root: false
+  end
+
   def create
     user = User.find_by(id: post_params[:user_id])
-
     if user
       post =  Post.create(post_params)
-
       if post.valid?
         render json: post, status: 201
       else

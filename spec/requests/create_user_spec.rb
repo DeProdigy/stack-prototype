@@ -6,6 +6,7 @@ RSpec.describe 'User create', type: :request do
 
     it 'creates a User' do
       post '/users', user: user_params
+
       expect(response.status).to eql 201
     end
   end
@@ -15,6 +16,7 @@ RSpec.describe 'User create', type: :request do
 
     it 'does not create a User' do
       post '/users', user: user_params
+
       expect(response.status).to eql 400
     end
   end

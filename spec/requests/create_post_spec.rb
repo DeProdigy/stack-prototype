@@ -7,6 +7,7 @@ RSpec.describe 'Post create', type: :request do
 
     it 'creates a Post' do
       post '/posts', post: post_params
+
       expect(response.status).to eql 201
     end
   end
@@ -19,6 +20,7 @@ RSpec.describe 'Post create', type: :request do
 
     it 'does not create a Post' do
       post '/posts', post: post_params
+
       expect(response.status).to eql 401
       expect(api_response).to eql expected_error
     end
@@ -31,6 +33,7 @@ RSpec.describe 'Post create', type: :request do
 
     it 'does not create a Post' do
       post '/posts', post: post_params
+
       expect(response.status).to eql 404
       expect(api_response).to eql expected_error
     end
