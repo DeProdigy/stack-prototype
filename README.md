@@ -25,22 +25,18 @@
 * if any posts exist, the response will be an array of user objects each with a posts property: 
 
 ```
-	[ 
-		{ 'id' => 37, 
-		  'username' => 'someone', 
-		  'posts' => [ 
-		  	{ 'id' => 42, 
-		  	  'content' => 'google.com', 
-		  	  'user_id' => 37, 
-		  	  'created_at' => '2015-10-06T20:02:25.059Z', 
-		  	  'updated_at' => '2015-10-06T20:02:25.059Z'
-		  	}, 
-		  	{ 'id' => 43, 
-		  	  'content' => 'yahoo.com', 
-		  	  'user_id' => 37, 
-		  	  'created_at' => '2015-10-06T20:02:25.061Z', 
-		  	  'updated_at' => '2015-10-06T20:02:25.061Z' 
-		  	 }
+	[
+		{ 'id' => 42,
+		  'content' => 'google.com',
+		  'user_id' => 37,
+		  'updated_at' => '2015-10-06T20:02:25.059Z',
+		  'created_at' => '2015-10-06T20:02:25.059Z'
+		 },
+		 { 'id' => 43,
+		   'content' => 'yahoo.com',
+		   'user_id' => 37,
+		   'updated_at' => '2015-10-06T20:02:25.061Z',
+		   'created_at' => '2015-10-06T20:02:25.061Z'
 		 }
 	]
 ```

@@ -1,7 +1,3 @@
 class PostsSerializer < ActiveModel::Serializer
-  attributes :id, :username, :posts
-
-  def posts
-    object.posts
-  end
+  attributes :id, :content, :user_id, :updated_at, :created_at
 end

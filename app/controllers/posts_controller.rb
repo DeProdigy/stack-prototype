@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-     users = User.includes(:posts).all
-     render json: users, each_serializer: PostsSerializer, root: false
+     posts = Post.all
+     render json: posts, each_serializer: PostsSerializer, root: false
   end
 
   def create
