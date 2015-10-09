@@ -59,4 +59,18 @@
 ```
 *  if not created, expect an `error` with a message
 
+## Comments
+######To create a comment:
 
+* make a `POST` to `/comments` with a `Comment` hash format:
+
+```
+	{ comment => { user_id: 'user-id, post_id: 'post-id, body: 'I like dogs' } }
+```
+
+* if created successfully, expect an object with a new DB id:
+
+```
+	{ 'id' => 3, 'body' => 'I like dogs', 'user_id' => '7', 'post_id' => '2' }
+```
+*  if not created, expect an `error` with a message
