@@ -6,8 +6,10 @@ class PostsController < ApplicationController
 
   def create
     user = User.find_by(id: post_params[:user_id])
+
     if user
-      post =  Post.create(post_params)
+      post =  Post.create(post_params.merge(content_type: ContentType.kind(post_params[:content].downcase)))
+
       if post.valid?
         render json: post, status: 201
       else

@@ -28,7 +28,8 @@
 	[
 		{
 		 	'id' => 41,
-		   	'content' => 'yahoo.com',
+		   	'content' => 'medium.com/something',
+		   	'content_type' => 'medium',
 		   	'user_id' => 37,
 		   	'comments' => [ ],
 		   	'views' => [ ],
@@ -37,7 +38,8 @@
 		},
 		{
 			'id' => 42,
-		  	'content' => 'google.com',
+		  	'content' => 'soundcloud.com/some-track',
+		  	'content_type' => 'soundcloud',
 		  	'user_id' => 37,
 		  	'comments' => [
 		  		{
