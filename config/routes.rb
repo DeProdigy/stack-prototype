@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create]
   resources :posts, only: [:create, :index]
   resources :comments, only: [:create]
+  resources :views, only: [:create]
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

@@ -74,3 +74,19 @@
 	{ 'id' => 3, 'body' => 'I like dogs', 'user_id' => '7', 'post_id' => '2' }
 ```
 *  if not created, expect an `error` with a message
+
+## Views
+######To create a view:
+
+* make a `POST` to `/views` with a `View` hash format:
+
+```
+	{ view => { user_id: 'user-id, post_id: 'post-id' } }
+```
+
+* if created successfully, expect an object with a new DB id:
+
+```
+	{ 'id' => 3, 'user_id' => '7', 'post_id' => '2' }
+```
+*  if not created, expect an `error` with a message
