@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-     posts = Post.all
-     render json: posts, each_serializer: PostsSerializer, root: false
+     posts = Post.includes(:comments, :views)
+     render json: posts, each_serializer: PostSerializer, root: false
   end
 
   def create

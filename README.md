@@ -26,17 +26,47 @@
 
 ```
 	[
-		{ 'id' => 42,
-		  'content' => 'google.com',
-		  'user_id' => 37,
-		  'updated_at' => '2015-10-06T20:02:25.059Z',
-		  'created_at' => '2015-10-06T20:02:25.059Z'
-		 },
-		 { 'id' => 43,
-		   'content' => 'yahoo.com',
-		   'user_id' => 37,
-		   'updated_at' => '2015-10-06T20:02:25.061Z',
-		   'created_at' => '2015-10-06T20:02:25.061Z'
+		{
+		 	'id' => 41,
+		   	'content' => 'yahoo.com',
+		   	'user_id' => 37,
+		   	'comments' => [ ],
+		   	'views' => [ ],
+		   	'updated_at' => '2015-10-06T20:02:25.061Z',
+		   	'created_at' => '2015-10-06T20:02:25.061Z'
+		},
+		{
+			'id' => 42,
+		  	'content' => 'google.com',
+		  	'user_id' => 37,
+		  	'comments' => [
+		  		{
+		  			'id' => '33',
+  			  		'body' => 'I like stuff',
+  			  		'post_id' => '12',
+  			  		'user_id' => '21',
+  		      		'created_at' => '2015-10-06T20:02:25.059Z',
+  			  		'updated_at' => '2015-10-06T20:02:25.059Z'
+  				}
+		  	],
+		  	'views' => [
+		  		{
+		  			'id' => '2',
+  			  		'post_id' => '12',
+  			  		'user_id' => '21',
+  		      		'created_at' => '2015-10-06T20:02:25.059Z',
+  			  		'updated_at' => '2015-10-06T20:02:25.059Z'
+  			 	},
+  			 	{
+  			 		'id' => '3',
+  			  		'post_id' => '12',
+  			  		'user_id' => '23',
+  		      		'created_at' => '2015-10-06T20:02:25.059Z',
+  			  		'updated_at' => '2015-10-06T20:02:25.059Z'
+  			 	}
+		  	],
+		  	'updated_at' => '2015-10-06T20:02:25.059Z',
+		  	'created_at' => '2015-10-06T20:02:25.059Z'
 		 }
 	]
 ```
